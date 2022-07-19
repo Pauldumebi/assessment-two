@@ -48,11 +48,11 @@ const Home = () => {
     <Fragment>
       <Header />
       <Banner />
+      <SearchInput handleSearch={handleSearch} />
       {movies?.loading ? (
         <Spinner />
       ) : (
         <>
-          <SearchInput handleSearch={handleSearch} />
           <ImageFrame movies={movies.movies} />
         </>
       )}
