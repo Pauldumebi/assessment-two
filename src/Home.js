@@ -43,7 +43,7 @@ const Home = () => {
 
   useEffect(() => {
     getRequest(searchWord);
-  }, []);
+  }, [searchWord]);
   return (
     <Fragment>
       <Header />
