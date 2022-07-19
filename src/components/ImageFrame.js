@@ -51,13 +51,4 @@ const ImageFrame = ({ title, image, movies }) => {
   );
 };
 
-ImageFrame.propTypes = {
-  image: PropTypes.string,
-  movieId: PropTypes.number,
-  movieName: PropTypes.string,
-  searchWord: PropTypes.string,
-  id: PropTypes.number,
-  clickable: PropTypes.bool,
-};
-
 export default ImageFrame;
