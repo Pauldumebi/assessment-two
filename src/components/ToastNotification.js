@@ -5,7 +5,7 @@ export const SuccessToast = (data, position) => {
 
   Array.isArray(data)
     ? data.map((item) => {
-        toast({
+        return toast({
           position: position ?? "bottom-right",
           title: "Success.",
           description: item,
@@ -29,7 +29,7 @@ export const ErrorToast = (data, position) => {
 
   Array.isArray(data)
     ? data.map((item) => {
-        toast({
+        return toast({
           position: position ?? "bottom-right",
           title: "Error.",
           description: item,

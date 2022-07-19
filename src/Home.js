@@ -8,7 +8,6 @@ import SearchInput from "./components/SearchInput";
 import Spinner from "./components/Spinner/Spinner";
 import Banner from "components/Banner";
 import Header from "components/Header";
-import { Box, Text } from "@chakra-ui/react";
 
 const Home = () => {
   const [movies, setMovies] = useState({
