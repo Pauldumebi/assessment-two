@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 import { Image, Grid, GridItem } from "@chakra-ui/react";
 import Carousel from "react-multi-carousel";
 import no_img from "./images/no_image.jpg";
@@ -25,28 +24,29 @@ const ImageFrame = ({ title, image, movies }) => {
 
   return (
     <>
-    <Fragment>
-      <Carousel
-        responsive={responsive}
-        centerMode={true}
-        autoPlay={false}
-        showDots={false}
-        shouldResetAutoplay={false}
-        draggable={true}
-      >
-        <Grid templateColumns="repeat(5, 1fr)" gap={6}>
-        {movies?.map((movie) => {
-          return (
-            
-              <GridItem w="100%">
-                <Image src={movie.Poster ? `${movie.Poster}` : `${no_img}`} alt={"Dan Abramov"} />
-              </GridItem>
-           
-          );
-        })}
-        </Grid>
-      </Carousel>
-    </Fragment>
+      <Fragment>
+        <Carousel
+          responsive={responsive}
+          centerMode={true}
+          autoPlay={false}
+          showDots={false}
+          shouldResetAutoplay={false}
+          draggable={true}
+        >
+          <Grid templateColumns="repeat(5, 1fr)" gap={6}>
+            {movies?.map((movie) => {
+              return (
+                <GridItem w="100%">
+                  <Image
+                    src={movie.Poster ? `${movie.Poster}` : `${no_img}`}
+                    alt={"Dan Abramov"}
+                  />
+                </GridItem>
+              );
+            })}
+          </Grid>
+        </Carousel>
+      </Fragment>
     </>
   );
 };
