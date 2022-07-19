@@ -33,7 +33,8 @@ const Home = () => {
           });
         });
     } catch (error) {
-      ErrorToast(error);
+      console.log(error);
+      ErrorToast("failed to fetch data");
     }
   };
   const handleSearch = debounce((e) => {
